@@ -14,21 +14,29 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: chumtoadafuq? blog!
-email: your-email@example.com
-description: > # this means to ignore newlines until "baseurl:"
-  Blog of a newbie full-stack developer.
-baseurl: "" # the subpath of your site, e.g. /blog
-technologies: Angular, TypeScript, RxJS, ASP.NET Core, Entity Framework Core, WebStorm, Azure...
-url: "https://chumtoadafuq.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+description: Blog of a newbie developer
+baseurl: ""
+url: "https://chumtoadafuq.github.io/"
 github_username: chumtoadafuq
 repository: chumtoadafuq/chumtoadafuq.github.io
 
+highlighter: rouge
+theme: jekyll-theme-cayman
+
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+kramdown:
+  input: GFM
+  # https://github.com/jekyll/jekyll/pull/4090
+  syntax_highlighter: rouge
+
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
 plugins_dir:
   - jekyll-feed
-
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
