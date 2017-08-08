@@ -127,7 +127,7 @@ export class FruitService {
 
 * We add `[formGroup]="fruitForm"` to bind our `fruitForm` `FormGroup` to the form.
 * We add `novalidate` to stop any built in validation that we're not in control of.
-* We add `[formControlName]="'fruit'"` to bin our `fruit` `FormControl` to the input element.
+* We add `[formControlName]="'fruit'"` to bind our `fruit` `FormControl` to the input element.
 * The first span element will show if our `'checkFruitIsApproved'` error is present on the `fruit` `FormControl`. The inner text of the span will display the error message we set as the value for the error key.
 * The second span element will show if the `fruitForm` `FormGroup` is valid.
 
@@ -142,3 +142,13 @@ export class FruitService {
   </span>
 </form>
 ```
+
+## Wrap up
+
+* Angular will only process AyncValidators if all (sync) Validators in the `FormGroup` have passed (sync) validation.
+* Validators can be applied at `FormGroup` or `FormControl` level.
+* If a `FormControl` is invalid, its parent `FormGroup` will also become invalid, however, the error information (key-value pair) will not rollup to `FormGroup` level.
+
+## Contact me
+
+Email me at [chum@chumtoadafuq.email](mailto:chum@chumtoadafuq.email).
